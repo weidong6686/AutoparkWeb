@@ -108,4 +108,4 @@ Some comments in the source code are course notes and therefore might not seem n
 * [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
 ## License
 
-#### [Jenna Jiang](./LICENSE)
+#### [weidong6686](./LICENSE)
