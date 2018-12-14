@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://www.topgear.com/sites/default/files/styles/16x9_1858w/public/news-listicle/image/mclaren_mso_rtta_570s-12.jpg?itok=GIbBYcmu) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://www.topgear.com/sites/default/files/styles/16x9_1858w/public/news-listicle/image/p90285382_highres_the-new-bmw-i8-roads.jpg?itok=oSAqkCXK);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://www.topgear.com/sites/default/files/styles/16x9_1858w/public/news-listicle/image/dsc07762_0.jpg?itok=K-6YvQ0s);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2018/11/08559c6f8b96cff27a43cf1257ff7b42/pf01.jpg?itok=mwZo9D4A);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2018/11/69ff04291f7f01f69b63d5ce68106fce/aston.jpg?itok=EBP-FqrW);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
